@@ -19,11 +19,12 @@ COMMANDS					*tabdiff-commands*
                 Intended usage is to start vim with alternating 'old' and
                 'new' files and then invoke this function immediately. It
                 expects there to be only one tab and an even number of
-                buffers, as in:
+                buffers, as in: >
 
 	vim -c 'silent :TabDiff'            \
 		/tmp/original/apples apples \
 		/tmp/original/oranges oranges
+<
 
 ABOUT						*tabdiff-about*
 

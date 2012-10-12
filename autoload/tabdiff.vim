@@ -13,19 +13,19 @@ let g:tabdiff#autoloaded = 1
 " open and 2*n buffers.
 "
 " Example:
-"	 gvim -c 'silent call TabDiff()' old-foo foo old-bar bar
+"	 gvim -c 'silent call tabdiff#tabdiff()' old-foo foo old-bar bar
 "
 "	 This will result in two tabs: old-foo+foo diff, and old-bar+bar diff.
-function! tabdiff#TabDiff()
+function! tabdiff#tabdiff()
 	let s:tab_multi_diff = 0
-	argdo call s:AddBufferToTab()
+	argdo call s:addtotab()
 	tabclose
 endfunction
 
 
 " Helper function used by TabDiff(). Adds current buffer to new tab
 " or last tab as appropriate, and sets new window's "diff" option.
-function! s:AddBufferToTab()
+function! s:addtotab()
 	let buf = bufnr("%")
 	if s:tab_multi_diff
 		tablast

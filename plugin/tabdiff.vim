@@ -10,4 +10,4 @@ endif
 let g:loaded_tabdiff = 1
 
 
-command! TabDiff call tabdiff#TabDiff()
+command! TabDiff call tabdiff#tabdiff()

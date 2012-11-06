@@ -17,6 +17,7 @@ let g:tabdiff#autoloaded = 1
 "
 "	 This will result in two tabs: old-foo+foo diff, and old-bar+bar diff.
 function! tabdiff#tabdiff()
+	let g:tabdiff_multidiffing = 1
 	let s:tab_multi_diff = 0
 	argdo call s:addtotab()
 	tabclose
@@ -29,7 +30,7 @@ function! s:addtotab()
 	let buf = bufnr("%")
 	if s:tab_multi_diff
 		tablast
-		vsplit
+		topleft vsplit
 		wincmd w
 	else
 		tab split

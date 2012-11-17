@@ -10,4 +10,7 @@ endif
 let g:loaded_tabdiff = 1
 
 
+let g:tabdiff_active = 0
+
+
 command! TabDiff call tabdiff#tabdiff()
